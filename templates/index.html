@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block content %}
 
 <!-- ========================= SECTION MAIN ========================= -->
@@ -7,7 +7,7 @@
     <div class="container">
     
     <div class="intro-banner-wrap">
-        <img src="images/banners/1.jpg" class="img-fluid rounded">
+        <img src="{% static 'images/banners/1.jpg'%}" class="img-fluid rounded">
     </div>
     
     </div> <!-- container //  -->
@@ -31,7 +31,7 @@
 			<a href="./product-detail.html" class="img-wrap"> <img src="{{i.product_image.url}}"> </a>
 			<figcaption class="info-wrap">
 				<a href="./product-detail.html" class="title">{{i.product_detail}}</a>
-				<div class="price mt-1">{{i.product_price}}</div> <!-- price-wrap.// -->
+				<div class="price mt-1">${{i.product_price}}</div> <!-- price-wrap.// -->
 			</figcaption>
 		</div>
 	</div> <!-- col.// -->
